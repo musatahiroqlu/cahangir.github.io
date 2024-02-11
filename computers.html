@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sell</title>
+    <link rel="stylesheet" href="css/computers.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha384-b9q5iAeBEeSzjv7j4P6Z2hDUfR1qOrqPbJfZ8sO5yXV7e2Ezwe5pKekuo8QVmCXY"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+    integrity="sha384-PzGGI8HwDZ62ctRXwqqqCDGOdOAa17JqEC3is6L6Xzmq7L1p6DAikq4EQuwvr+M6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-ggO3liB/WSuMz9vTlF2F6kkz18U9BTV5z8gBtkUCcX2LQLvm+JoDKEVR7Muh1/2Z"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    .comp {
+      padding: 15px;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #D6D2C4;
+    }
+    #computers-table{
+      margin: auto;
+    }
+.delete-button{
+background-color: red;
+color:white;
+padding: 5px;
+border: none;
+border-radius: 5px;
+cursor:pointer;
+}
+.edit-button{
+    background-color: blue;
+    color: white;
+    padding: 5px;
+    border: none;
+border-radius: 5px;
+cursor:pointer;
+}
+.new-computer-button{
+    background-color: rgb(116, 105, 105);
+    color:white;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor:pointer;   
+    display: flex;
+    margin: auto;
+}
+.computer-image{
+    width: 80px;
+}
+#computer-image-modal{
+    display: none;
+    background-color: rgb(20, 20, 20 , 0.4);
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+#computer-image-modal-content{
+    width: 40%;
+    margin: auto;
+    height: auto;
+    animation-name: computer-image-modal-animation;
+     animation-duration: 0.5s;
+}
+#computer-image-element{
+    width: 100%;
+}
+@keyframes computer-image-modal-animation{
+    from{ transform:scale(0) ;}
+    to{ transform:scale(1) ;}
+}
+table {
+      border-collapse: collapse;
+      width: 60%;
+      height: 40vh;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      text-align: center;
+      background-color: white;
+    }
+    input {
+      padding: 5px;
+      border-radius: 5px;
+      outline: none;
+      border: none;
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    thead {
+      background-color: rgba(15, 15, 94, 0.86);
+      color: white;
+    }
+
+    thead td {
+      padding: 15px;
+    }
+    th{
+     padding: 15px;
+    }
+    .topnav {
+      overflow: hidden;
+      background-color: #e9e9e9;
+    }
+    .Container {
+      width: 100%;
+      height: 100vh;
+      align-items: center;
+      flex-direction: column;
+    }
+    .topnav a {
+      float: left;
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .topnav a.active {
+      background-color: #2196F3;
+      color: white;
+    }
+    #username-label{
+      display: flex;
+    }
+    #search-input {
+    display: block;
+    margin: auto;
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+  }
+    </style>
+  </head>
+  <body>
+    <div class="topnav">
+      <a class="active" href="Lobby.html">Home</a>
+      <a href="shopping.html">Shop</a>
+      <i class="material-icons comp">computer</i>
+      <div class="search-container">
+        </form>
+      </div>
+    </div>
+    <button class="new-computer-button" onclick="onNewComputer()">Add Item</button>
+   <h3>UserName:</h3>
+  <h3 id="userr"></h3>
+      <div class="Container">
+        <table id="computers-table">
+          <thead>
+            <input type="text" id="search-input" placeholder="Search..." oninput="onSearch(event)">
+            <tr>
+              <th>ID</th>
+              <th>Brand</th>
+              <th>Model</th>
+              <th>Memory</th>
+              <th>Image</th>
+              <th>Operations</th>
+            </tr>
+          </thead>
+          <tbody id="computers-tbody">
+          </tbody>
+        </table>
+    </div>
+    <div id="computer-image-modal">
+      <div id="computer-image-modal-content">
+        <img id="computer-image-element" />
+      </div>
+    </div>
+    <script src="./computers.js"></script>
+  </body>
+</html>

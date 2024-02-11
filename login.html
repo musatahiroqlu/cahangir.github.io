@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha384-b9q5iAeBEeSzjv7j4P6Z2hDUfR1qOrqPbJfZ8sO5yXV7e2Ezwe5pKekuo8QVmCXY"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+    integrity="sha384-PzGGI8HwDZ62ctRXwqqqCDGOdOAa17JqEC3is6L6Xzmq7L1p6DAikq4EQuwvr+M6"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-ggO3liB/WSuMz9vTlF2F6kkz18U9BTV5z8gBtkUCcX2LQLvm+JoDKEVR7Muh1/2Z"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+                height: 100vh;
+            }
+            .comp{
+          padding: 15px;
+        }
+        * {box-sizing: border-box;}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #D6D2C4 ;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #e9e9e9;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #2196F3;
+  color: white;
+}
+
+.topnav .search-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+        .esas{
+            width: 600px;
+            height: 500px;
+            margin: auto;
+            margin-top: 100px;
+            box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
+           background-color: #83c6e2;
+    border-radius: 15px;
+        }
+        .salam{
+            text-align: center;
+            padding-top: 50px;
+        }
+        .sagol{
+            text-align: center;
+            padding: 10px;
+            color: gray;
+        }
+        .a{
+           display: block;
+           padding-left: 15px;
+           margin: auto;
+           margin-top: 30px;
+           width: 300px;
+           height: 40px;
+
+        }
+        .b{
+            display: block;
+           padding-left: 15px;
+           margin: auto;
+           margin-top: 30px;
+           width: 300px;
+           height: 40px;
+        }
+        .or{
+            color: gray;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            text-align: center;
+            display: block;
+        }
+        .log{
+            display: block;
+            background-color:#bc6e96;
+            width: 300px;
+           height: 40px;
+           margin: auto;
+           margin-top: 30px;
+           color: white;
+           font-size: 1rem;
+        }
+        .sign{
+            display: block;
+            background-color:#bc6e96;
+            width: 300px;
+           height: 40px;
+           margin: auto;
+           color: white;
+           font-size: 1rem;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="index.html">Home</a>
+        <i class="material-icons comp">computer</i>
+        <div class="search-container">
+          <form action="/action_page.php">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+      </div>
+    <form>
+        <div class="esas">
+            <h1 class="salam">Log In</h1>
+            <p class="sagol">login here using your username and password</p>
+            <input required type="text" class="a" id="email" placeholder="UserName">
+            <input required type="password" class="b" id="password" placeholder="Password">
+            <button id="button" class="log">Log In</button>
+            <p class="or">Or</p>
+            <button onclick="btn()" class="sign">Sign Up</button>
+            </div>
+    </form>
+    <script src="./login.js"></script>
+</body>
+</html>

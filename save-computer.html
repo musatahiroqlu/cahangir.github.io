@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="Save Computer"></title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha384-b9q5iAeBEeSzjv7j4P6Z2hDUfR1qOrqPbJfZ8sO5yXV7e2Ezwe5pKekuo8QVmCXY"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+    integrity="sha384-PzGGI8HwDZ62ctRXwqqqCDGOdOAa17JqEC3is6L6Xzmq7L1p6DAikq4EQuwvr+M6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-ggO3liB/WSuMz9vTlF2F6kkz18U9BTV5z8gBtkUCcX2LQLvm+JoDKEVR7Muh1/2Z"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+     * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .comp {
+      padding: 15px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #D6D2C4;
+    }
+
+    .topnav {
+      overflow: hidden;
+      background-color: #e9e9e9;
+    }
+
+    .topnav a {
+      float: left;
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .topnav a.active {
+      background-color: #2196F3;
+      color: white;
+    }
+
+    .topnav .search-container {
+      float: right;
+    }
+
+    .topnav input[type=text] {
+      padding: 6px;
+      margin-top: 8px;
+      font-size: 17px;
+      border: none;
+    }
+
+    .topnav .search-container button {
+      float: right;
+      padding: 6px 10px;
+      margin-top: 8px;
+      margin-right: 16px;
+      background: #ddd;
+      font-size: 17px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .topnav .search-container button:hover {
+      background: #ccc;
+    }
+
+   .aydan{
+    display: inline-block;
+   }
+    input{
+      display: flex;
+     margin: auto;
+    }
+    .SAVE{
+      background-color: rgba(8, 8, 26, 0.361);
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      border-radius: 7px;
+      margin: auto;
+      margin-top: 200px;
+      width: 20%;
+text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="topnav">
+    <a class="active" href="index.html">Home</a>
+    <a href="computers.html">Sell</a>
+    <i class="material-icons comp">computer</i>
+    <div class="search-container">
+      <form action="/action_page.php">
+        <input class="aydan" type="text" placeholder="Search.." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+  </div>
+  </div>
+  <div class="SAVE">
+    <form onsubmit="onSaveComputer(event)">
+      <label for="computer-brand">Brand</label>
+      <input id="computer-brand" required placeholder="type here..."> <br>
+      <label for="computer-model">Model</label>
+      <input id="computer-model" required placeholder="type here..."> <br>
+      <label for="computer-ram">Memory</label>
+      <input id="computer-ram" placeholder="type here..." required type="number" min="0" max="256"> <br>
+      <label for="computer-image">Image</label>
+      <input id="computer-image" placeholder="type here..." required type="text" min="0" max="256"> <br>
+      <input type="submit" value="Save" class="btn btn-primary">
+      <input type="reset" value="Reset" class="btn btn-danger">
+  </form>
+  </div>
+    <script src="./save-computer.js" ></script>
+</body>
+</html>
